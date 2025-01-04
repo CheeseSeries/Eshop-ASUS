@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
+    <script src="java.js"></script>
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(241, 241, 241);">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -65,18 +66,100 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                      <div>
-                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                      </div>
-                      <div class="dropdown mt-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                          Dropdown button
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                      <div class="filter-section">
+                        <!-- Kategorie -->
+                        <div>
+                          <div class="filter-title">Dle Kategorie</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Kategorie
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox">Kabelové klávesnice </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox" disabled>Membránové klávesnice </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
+                    
+                        <!-- Série -->
+                        <div>
+                          <div class="filter-title">Dle Série</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Série
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox" checked>ROG - Gamers Republic</label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">TUF Gaming </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
+                    
+                        <!-- Velikost -->
+                        <div>
+                          <div class="filter-title">Velikost</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Velikost
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox">100% </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">80% </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
+                    
+                        <!-- Konektivita -->
+                        <div>
+                          <div class="filter-title">Konektivita</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Konektivita
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox">USB 2.0 </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">Wireless </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox" disabled>Wired </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">RF 2.4GHz </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
+                    
+                        <!-- Osvětlení -->
+                        <div>
+                          <div class="filter-title">Osvětlení</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Osvětlení
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox">Per-Key RGB </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox" disabled>5-zones RGB </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">AURA Sync </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
+                    
+                        <!-- Barva -->
+                        <div>
+                          <div class="filter-title">Barva</div>
+                          <div class="custom-dropdown">
+                            <button class="custom-dropdown-toggle" onclick="toggleDropdown(this)">
+                              Barva
+                            </button>
+                            <ul class="custom-dropdown-menu">
+                              <li><label><input type="checkbox" class="custom-checkbox">Černá </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">Bílá </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">Šedá </label></li>
+                            </ul>
+                            <hr class="carka">
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -86,15 +169,197 @@
                         Řazení
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Nejlevnější</a></li>
+                    <li><a class="dropdown-item" href="#">Nejdražší</a></li>
+                    <li><a class="dropdown-item" href="#">Hodnocení</a></li>
+                    <li><a class="dropdown-item" href="#">Nejnovější</a></li>
                     </ul>
                 </div>
             </div>
         </div>
       </div>
+      <div class="container py-4">
+          <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img1.webp" alt="Keyboard">
+                <h5>ROG Azoth Extreme</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní klávesnice ROG Azoth Extreme 75 % z hliníkové slitiny, polohovací deskou z uhlíkových vláken, nastavitelným těsněním, plnobarevným dotykovým OLED displejem s třísměrným ovládacím knoflíkem, rozšířenou opěrkou zápěstí, magnetickými nožičkami, třemi režimy připojení.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img2.webp" alt="Keyboard">
+                <h5>ROG Strix Scope II RX</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní klávesnice ROG Strix Scope II RX s předlubrikovanými optickými spínači ROG RX, ochranou IP57 vůči vodě, pěnou tlumící zvuk, klávesami PBT doubleshot nebo klávesami ABS s UV vrstvou, klávesovými zkratkami pro streamování, multifunkčními ovládacími prvky.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img3.webp" alt="Keyboard">
+                <h5>ROG Strix Scope II</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní klávesnice ROG Strix Scope II s předlubrikovanými optickými spínači ROG RX Snow a NX Storm, pěnou tlumící zvuk, klávesami PBT doubleshot nebo klávesami ABS s UV vrstvou, klávesovými zkratkami pro streamování, multifunkčními ovládacími prvky.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img4.webp" alt="Keyboard">
+                <h5>ROG Strix Scope II 96 Wireless</h5>
+                <div class="barvy">
+                  <div class="color-white"></div>
+                  <div class="color-black"></div>
+                </div>
+                <p>Bezdrátová herní klávesnice ROG Strix Scope II 96 s třírežimovým připojením, streamovacími klávesami, multifunkčními ovládacími prvky, mechanickými spínači ROG NX s možností výměny za provozu, stabilizátory klávesnice ROG, dvojitými kryty kláves PBT a silikonovou tlumicí pěnou.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img5.webp" alt="Keyboard">
+                <h5>ROG Strix Flare II</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní mechanická klávesnice ROG Strix Flare II s frekvencí 8000 Hz, mechanickými spínači ROG NX, PBT klávesami, kovovými ovládacími prvky a odnímatelnou opěrkou zápěstí.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img6.webp" alt="Keyboard">
+                <h5>ROG Falchion Ace</h5>
+                <div class="barvy">
+                  <div class="color-white"></div>
+                  <div class="color-black"></div>
+                </div>
+                <p>Kompaktní herní klávesnice ROG Falchion Ace v 65% velikosti standardní klávesnice s předlubrikovanými mechanickými spínači ROG NX se stabilizátorem spínačů ROG, klávesami PBT doubleshot, pěnou tlumící hluk, interaktivním dotykovým panelem, dvěma porty USB-C.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img7.webp" alt="Keyboard">
+                <h5>ROG Azoth</h5>
+                <div class="barvy">
+                  <div class="color-white"></div>
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní klávesnice ROG Azoth v 75% velikosti standardní klávesnice, těsnění, třívrstvá tlumicí pěna a kovový horní kryt, vysoce přizpůsobitelná, s mechanickými spínači ROG NX s možností výměny za provozu, ROG stabilizátory klávesnice, klávesy PBT doubleshot a lubrikační sada.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img8.webp" alt="Keyboard">
+                <h5>ROG Falchion RX Low Profile</h5>
+                <div class="barvy">
+                  <div class="color-white"></div>
+                </div>
+                <p>Kompaktní bezdrátová herní klávesnice ROG Falchion RX Low Profile 65% s nízkoprofilovými optickými spínači ROG RX, třemi režimy připojení pomocí bezdrátové technologie ROG SpeedNova a přijímače Omni Receiver, ochranným krytem.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img9.webp" alt="Keyboard">
+                <h5>ROG Strix Flare II Animate</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní mechanická klávesnice ROG Strix Flare II Animate s LED displejem AniMe Matrix™, frekvencí snímání 8000 Hz, mechanickými spínači ROG NX nebo Cherry MX, vyměnitelnými spínači, kovovými multimediálními ovládacími prvky a opěrkou zápěstí.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img10.webp" alt="Keyboard">
+                <h5>ROG Strix Scope NX TKL Moonlight White</h5>
+                <div class="barvy">
+                  <div class="color-white"></div>
+                </div>
+                <p>Kabelová mechanická herní RGB klávesnice ROG Strix Scope NX TKL Moonlight White pro hry FPS, se spínači ROG NX, hliníkovým rámem a osvětlením Aura Sync.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img11.webp" alt="Keyboard">
+                <h5>ROG Claymore II</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Modulární herní mechanická klávesnice ROG Claymore II TKL 80%/100% s optickými mechanickými spínači ROG RX, odnímatelnou numerickou klávesnicí a opěrkou zápěstí, drátovým a bezdrátovým režimem 2.4G, extra programovatelnými klávesami.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img12.webp" alt="Keyboard">
+                <h5>ROG Falchion</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Bezdrátová mechanická herní klávesnice ROG Falchion v 65% provedení, s 68 klávesami, bezdrátovým osvětlením Aura Sync, interaktivním dotykovým panelem, pouzdrem, spínači Cherry MX a až 450hodinovou výdrží baterie.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 rada">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img13.webp" alt="Keyboard">
+                <h5>TUF Gaming K3 Gen II</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Klávesnice ASUS TUF Gaming K3 Gen II s kompaktním rozložením 97 kláves, opticko-mechanickými RGB spínači, silikonovým těsněním, tlumicí pěnou, stupněm krytí IP57, odnímatelným horním panelem a kompatibilitou s Aura Sync.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+      
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="karta">
+                <img src="imgs/img14.png" alt="Keyboard">
+                <h5>TUF Gaming K1</h5>
+                <div class="barvy">
+                  <div class="color-black"></div>
+                </div>
+                <p>Herní klávesnice ASUS TUF Gaming K1 RGB s vlastním ovládáním hlasitosti, odolností proti postříkání, postrannímu světelnému pásku a Armoury Crate.</p>
+                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
   </body>
