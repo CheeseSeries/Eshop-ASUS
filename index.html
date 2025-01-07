@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eshop</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <script src="java.js"></script>
+    <script src="js/java.js"></script>
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(241, 241, 241);">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -40,20 +40,44 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Podpora</a>
               </li>
+              <li class="nav-item dropdown-custom">
+                <a class="navbar-brand dropdown-toggle-custom" href="#" id="shoppingCartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img class="cart" src="imgs/cart.svg" alt="" height="30" width="30">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="shoppingCartDropdown">
+                  <!-- Product Template 1 -->
+                  <li class="dropdown-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">TUF Gaming K3 Gen II</h6>
+                      <small class="text-muted">€100,00</small>
+                    </div>
+                    <img src="imgs/img13.webp" alt="Product 1" class="img-thumbnail" style="width: 50px; height: 50px;">
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <!-- Product Template 2 -->
+                  <li class="dropdown-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">ROG Azoth Extreme</h6>
+                      <small class="text-muted">€400,00</small>
+                    </div>
+                    <img src="imgs/img1.webp" alt="Product 2" class="img-thumbnail" style="width: 50px; height: 50px;">
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <!-- Checkout Button -->
+                  <li class="dropdown-item text-center">
+                    <button class="btn btn-primary btn-sm w-100">Zaplatit</button>
+                  </li>
+                </ul>
+              </li>
             </ul>
-            <div class="d-flex">
-              <a href="#" class="me-3"><i class="bi bi-search"></i></a>
-              <a href="#" class="me-3"><i class="bi bi-cart"></i></a>
-              <a href="#"><i class="bi bi-person"></i></a>
-            </div>
           </div>
         </div>
       </nav>
       <div class="container">
         <div class="top d-flex">
           <form class="d-flex search" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn-custom" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Hledat" aria-label="Search">
+            <button class="btn-custom" type="submit">Hledat</button>
           </form>
             <div class="settings">
                 <div class="idk">
@@ -62,7 +86,7 @@
                   </button>
                   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtry</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -90,7 +114,7 @@
                               Série
                             </button>
                             <ul class="custom-dropdown-menu">
-                              <li><label><input type="checkbox" class="custom-checkbox" checked>ROG - Gamers Republic</label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox">ROG - Gamers Republic</label></li>
                               <li><label><input type="checkbox" class="custom-checkbox">TUF Gaming </label></li>
                             </ul>
                             <hr class="carka">
@@ -155,7 +179,7 @@
                             <ul class="custom-dropdown-menu">
                               <li><label><input type="checkbox" class="custom-checkbox">Černá </label></li>
                               <li><label><input type="checkbox" class="custom-checkbox">Bílá </label></li>
-                              <li><label><input type="checkbox" class="custom-checkbox">Šedá </label></li>
+                              <li><label><input type="checkbox" class="custom-checkbox" disabled>Šedá </label></li>
                             </ul>
                             <hr class="carka">
                           </div>
@@ -189,7 +213,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní klávesnice ROG Azoth Extreme 75 % z hliníkové slitiny, polohovací deskou z uhlíkových vláken, nastavitelným těsněním, plnobarevným dotykovým OLED displejem s třísměrným ovládacím knoflíkem, rozšířenou opěrkou zápěstí, magnetickými nožičkami, třemi režimy připojení.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -201,7 +225,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní klávesnice ROG Strix Scope II RX s předlubrikovanými optickými spínači ROG RX, ochranou IP57 vůči vodě, pěnou tlumící zvuk, klávesami PBT doubleshot nebo klávesami ABS s UV vrstvou, klávesovými zkratkami pro streamování, multifunkčními ovládacími prvky.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -213,7 +237,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní klávesnice ROG Strix Scope II s předlubrikovanými optickými spínači ROG RX Snow a NX Storm, pěnou tlumící zvuk, klávesami PBT doubleshot nebo klávesami ABS s UV vrstvou, klávesovými zkratkami pro streamování, multifunkčními ovládacími prvky.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -226,7 +250,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Bezdrátová herní klávesnice ROG Strix Scope II 96 s třírežimovým připojením, streamovacími klávesami, multifunkčními ovládacími prvky, mechanickými spínači ROG NX s možností výměny za provozu, stabilizátory klávesnice ROG, dvojitými kryty kláves PBT a silikonovou tlumicí pěnou.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
           </div>
@@ -240,7 +264,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní mechanická klávesnice ROG Strix Flare II s frekvencí 8000 Hz, mechanickými spínači ROG NX, PBT klávesami, kovovými ovládacími prvky a odnímatelnou opěrkou zápěstí.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -253,7 +277,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Kompaktní herní klávesnice ROG Falchion Ace v 65% velikosti standardní klávesnice s předlubrikovanými mechanickými spínači ROG NX se stabilizátorem spínačů ROG, klávesami PBT doubleshot, pěnou tlumící hluk, interaktivním dotykovým panelem, dvěma porty USB-C.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -266,7 +290,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní klávesnice ROG Azoth v 75% velikosti standardní klávesnice, těsnění, třívrstvá tlumicí pěna a kovový horní kryt, vysoce přizpůsobitelná, s mechanickými spínači ROG NX s možností výměny za provozu, ROG stabilizátory klávesnice, klávesy PBT doubleshot a lubrikační sada.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -278,7 +302,7 @@
                   <div class="color-white"></div>
                 </div>
                 <p>Kompaktní bezdrátová herní klávesnice ROG Falchion RX Low Profile 65% s nízkoprofilovými optickými spínači ROG RX, třemi režimy připojení pomocí bezdrátové technologie ROG SpeedNova a přijímače Omni Receiver, ochranným krytem.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
           </div>
@@ -292,7 +316,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní mechanická klávesnice ROG Strix Flare II Animate s LED displejem AniMe Matrix™, frekvencí snímání 8000 Hz, mechanickými spínači ROG NX nebo Cherry MX, vyměnitelnými spínači, kovovými multimediálními ovládacími prvky a opěrkou zápěstí.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -304,7 +328,7 @@
                   <div class="color-white"></div>
                 </div>
                 <p>Kabelová mechanická herní RGB klávesnice ROG Strix Scope NX TKL Moonlight White pro hry FPS, se spínači ROG NX, hliníkovým rámem a osvětlením Aura Sync.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -316,7 +340,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Modulární herní mechanická klávesnice ROG Claymore II TKL 80%/100% s optickými mechanickými spínači ROG RX, odnímatelnou numerickou klávesnicí a opěrkou zápěstí, drátovým a bezdrátovým režimem 2.4G, extra programovatelnými klávesami.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -328,7 +352,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Bezdrátová mechanická herní klávesnice ROG Falchion v 65% provedení, s 68 klávesami, bezdrátovým osvětlením Aura Sync, interaktivním dotykovým panelem, pouzdrem, spínači Cherry MX a až 450hodinovou výdrží baterie.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
           </div>
@@ -342,7 +366,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Klávesnice ASUS TUF Gaming K3 Gen II s kompaktním rozložením 97 kláves, opticko-mechanickými RGB spínači, silikonovým těsněním, tlumicí pěnou, stupněm krytí IP57, odnímatelným horním panelem a kompatibilitou s Aura Sync.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
       
@@ -354,7 +378,7 @@
                   <div class="color-black"></div>
                 </div>
                 <p>Herní klávesnice ASUS TUF Gaming K1 RGB s vlastním ovládáním hlasitosti, odolností proti postříkání, postrannímu světelnému pásku a Armoury Crate.</p>
-                <a class="btn odkaz btn-primary" href="" role="button">Přejít na produkt</a>
+                <a class="btn odkaz btn-primary" href="produkt.html" role="button">Přejít na produkt</a>
               </div>
             </div>
           
