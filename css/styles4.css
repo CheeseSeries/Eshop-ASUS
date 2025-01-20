@@ -1,0 +1,15 @@
+.form-check {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+.form-check + .form-check {
+    margin-top: 15px;
+}
+.form-check .form-check-input {
+    margin-left: 0px !important;
+}
+.dopr {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,30 @@
+.sidebar {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.total {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.item .price {
+    color: #d63384;
+}
+.konec {
+    margin-top: 50px;
+}

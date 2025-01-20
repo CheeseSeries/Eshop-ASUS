@@ -1,0 +1,22 @@
+.progress-step .badge {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+}
+.cara {
+    width: 100%;
+    margin-bottom: 60px;
+    border-width: 2px;
+}
+.konec {
+    margin-bottom: 200px;
+}
+body {
+    font-family: Arial, sans-serif;
+  }
+  .step {
+    background-color: white;
+  }
+  .step2 {
+    color: black;
+  }
